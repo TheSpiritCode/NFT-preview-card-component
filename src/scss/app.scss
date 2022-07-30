@@ -3,4 +3,136 @@
 html {
   font-size: $font-size;
   font-family: 'Outfit', sans-serif;
+
+
+  body {
+    background-color: $very-dark-blue-main-bg;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: $soft-blue;
+
+    .overlay {
+      display: none;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-color: $cyan-op;
+      border-radius: 15px;
+      position: absolute;
+      background-image: url("/images/icon-view.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+
+      img {
+        width: 44px;
+        opacity: 100%;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: $white;
+
+      &:hover {
+        color: $cyan !important;
+
+        & > .overlay {
+          display: block;
+        }
+      }
+    }
+
+
+    .container {
+      background-color: $very-dark-blue-card-bg;
+      border-radius: 30px;
+      padding: 1.3rem;
+      display: flex;
+      flex-direction: column;
+      min-width: 326px;
+      max-width: 350px;
+
+      .image {
+        position: relative;
+        width: 100%;
+        display: inline-block;
+        img {
+          width: 100%;
+          border-radius: 15px;
+        }
+      }
+
+      .description {
+        h1 {
+          color: $white;
+          font-size: 23px;
+          font-weight: 600;
+        }
+
+        p {
+          line-height: 1.5rem;
+          font-weight: 300;
+          font-size: 0.88rem;
+        }
+
+        .description__details {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          padding-bottom: 1rem;
+          border-bottom: 1px solid $very-dark-blue-line;
+          font-size: 0.7rem;
+
+          .price {
+            display: flex;
+            align-items: center;
+            color: $cyan;
+            font-weight: 400;
+
+            img {
+              margin-right: 0.3rem;
+            }
+          }
+
+          .time {
+            display: flex;
+            align-items: center;
+            font-weight: 400;
+
+            img {
+              margin-right: 0.3rem;
+            }
+          }
+
+
+
+        }
+      }
+
+      .creator {
+        margin-top: 1rem;
+        font-weight: 300;
+        display: flex;
+        align-items: center;
+        font-size: 0.88rem;
+
+        img {
+          width: 30px;
+          border: 1px solid $white;
+          border-radius: 50%;
+          margin-right: 1rem;
+        }
+
+        .creator__name {
+          color: $white;
+          margin-left: 0.3rem;
+        }
+
+      }
+    }
+  }
 }

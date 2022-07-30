@@ -3,3 +3,109 @@ html {
   font-size: 18px;
   font-family: "Outfit", sans-serif;
 }
+html body {
+  background-color: hsl(217deg, 54%, 11%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: hsl(215deg, 51%, 70%);
+}
+html body .overlay {
+  display: none;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: hsla(178deg, 100%, 50%, 0.5);
+  border-radius: 15px;
+  position: absolute;
+  background-image: url("/images/icon-view.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+html body .overlay img {
+  width: 44px;
+  opacity: 100%;
+}
+html body a {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 100%);
+}
+html body a:hover {
+  color: hsl(178deg, 100%, 50%) !important;
+}
+html body a:hover > .overlay {
+  display: block;
+}
+html body .container {
+  background-color: hsl(216deg, 50%, 16%);
+  border-radius: 30px;
+  padding: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 326px;
+  max-width: 350px;
+}
+html body .container .image {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+html body .container .image img {
+  width: 100%;
+  border-radius: 15px;
+}
+html body .container .description h1 {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 23px;
+  font-weight: 600;
+}
+html body .container .description p {
+  line-height: 1.5rem;
+  font-weight: 300;
+  font-size: 0.88rem;
+}
+html body .container .description .description__details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid hsl(215deg, 32%, 27%);
+  font-size: 0.7rem;
+}
+html body .container .description .description__details .price {
+  display: flex;
+  align-items: center;
+  color: hsl(178deg, 100%, 50%);
+  font-weight: 400;
+}
+html body .container .description .description__details .price img {
+  margin-right: 0.3rem;
+}
+html body .container .description .description__details .time {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+}
+html body .container .description .description__details .time img {
+  margin-right: 0.3rem;
+}
+html body .container .creator {
+  margin-top: 1rem;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  font-size: 0.88rem;
+}
+html body .container .creator img {
+  width: 30px;
+  border: 1px solid hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+html body .container .creator .creator__name {
+  color: hsl(0deg, 0%, 100%);
+  margin-left: 0.3rem;
+}
